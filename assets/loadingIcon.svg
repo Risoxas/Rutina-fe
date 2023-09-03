@@ -1,0 +1,26 @@
+<svg
+  width="40"
+  height="40"
+  viewBox="0 0 50 50"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <circle
+    cx="25"
+    cy="25"
+    r="20"
+    fill="none"
+    strokeWidth="5"
+    stroke="#000"
+    strokeLinecap="round"
+    strokeDasharray="31.41592653589793 94.24777960769379"
+  >
+    <animateTransform
+      attributeName="transform"
+      type="rotate"
+      repeatCount="indefinite"
+      dur="1s"
+      keyTimes="0;1"
+      values="0 25 25;360 25 25"
+    ></animateTransform>
+  </circle>
+</svg>
