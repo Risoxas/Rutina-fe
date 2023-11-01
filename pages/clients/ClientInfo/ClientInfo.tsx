@@ -527,12 +527,15 @@ const ClientInfo: React.FC = () => {
                   style={{ height: "100%" }}
                 />
               </StyledRoutineForm>
-              {/* <StyledSpan>
-                <strong>* Campos Requeridos</strong>
-                {!!Object.keys(routineMissingFields).length && isSubmitted && (
-                  <ErrorLabel>Campo Requerido vacio</ErrorLabel>
-                )}
-              </StyledSpan> */}
+              {
+                <StyledSpan>
+                  <strong>* Campos Requeridos</strong>
+                  {!!Object.keys(routineMissingFields).length &&
+                    isSubmitted && (
+                      <ErrorLabel>Campo Requerido vacio</ErrorLabel>
+                    )}
+                </StyledSpan>
+              }
             </>
           )}
           <StyledTable>
@@ -778,20 +781,20 @@ const StyledExerciseForm = styled.form`
   grid-gap: 20px;
   grid-template-columns: repeat(2, 10fr) min-content min-content max-content max-content;
 `;
-// const ErrorLabel = styled.label`
-//   color: red;
-//   font-size: 1rem;
-//   margin-left: 0.5rem;
-// `;
+const ErrorLabel = styled.label`
+  color: red;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+`;
 
-// const StyledSpan = styled.span`
-//   display: flex;
-//   flex-direction: column;
-//   gap: 5px;
-//   position: absolute;
-//   top: 54%;
-//   right: 78%;
-// `;
+const StyledSpan = styled.span`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: absolute;
+  top: 54%;
+  right: 78%;
+`;
 
 const AddButton = styled.button`
   height: 15px;
