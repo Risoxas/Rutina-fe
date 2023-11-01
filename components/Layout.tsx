@@ -1,21 +1,26 @@
-// components/Layout.tsx
-import React from 'react';
-import NavBar from './NavBar'; // We'll create this component next
-import { type } from 'os';
+import React from "react";
+import styled from "styled-components";
+import NavBar from "./NavBar";
 
 interface LayoutProps {
   children: React.ReactNode;
 }
 
-export const Layout: React.FC<LayoutProps> = ({ children }) => {
+const StyledLayout = styled.div`
+  width: 100%;
+  padding: 0 2.5rem;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.2em;
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+`;
 
+export const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <NavBar />
-      <div>
-        {children}
-      </div>
+      <StyledLayout>{children}</StyledLayout>
     </div>
   );
-}
-
+};

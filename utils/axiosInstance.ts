@@ -1,11 +1,11 @@
-import axios from 'axios';
+import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: process.env.BACKEND_URL || 'default_backend_url_here',
-    timeout: 5000, // Optional: set a timeout limit for requests
-    headers: {
-        'Content-Type': 'application/json'
-    }
+  baseURL: process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:3000",
+  timeout: 5000, // Optional: set a timeout limit for requests
+  headers: {
+    "Content-Type": "application/json",
+  },
 });
 
 export default axiosInstance;
