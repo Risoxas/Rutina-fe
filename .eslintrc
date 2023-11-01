@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "next",
+    "next/core-web-vitals",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "@typescript-eslint/ban-types": "off",
+    "prettier/prettier": "warn",
+    "array-element-newline": ["warn", "consistent"],
+    "camelcase": "off",
+    "comma-dangle": ["warn", "only-multiline"],
+    "@typescript-eslint/no-explicit-any": "off",
+    "max-len": [
+      "warn",
+      {
+        "code": 100,
+        "ignoreTrailingComments": true,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "after-used",
+        "ignoreRestSiblings": false,
+        "argsIgnorePattern": "^_"
+      }
+    ],
+    "no-use-before-define": ["error", "nofunc"],
+    "semi": "warn",
+    "@typescript-eslint/ban-ts-comment": "off",
+  }
+}
